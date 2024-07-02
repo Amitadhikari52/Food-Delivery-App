@@ -16,22 +16,6 @@ const Header = () => {
       >
         <div className="header-slide">
           <img
-            src="../../../public/header_img.png"
-            alt="Burger"
-            className="header-image"
-          />
-          <div className="header-contents">
-            <h2>Order your favourite food here</h2>
-            <p>
-              Embark on a culinary adventure with us and savor the extraordinary
-              flavors of our menu offerings. From classic comfort foods to
-              innovative creations, there's something for every palate to enjoy.
-            </p>
-            <button>View Menu</button>
-          </div>
-        </div>
-        <div className="header-slide">
-          <img
             src="https://img.freepik.com/premium-vector/paneer-skewers-vector_953932-4318.jpg?ga=GA1.2.462622986.1716905857&semt=ais_user"
             alt="Burger"
             className="header-image"
