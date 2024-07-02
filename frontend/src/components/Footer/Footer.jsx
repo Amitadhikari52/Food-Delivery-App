@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { assets } from "../../assets/assets";
 import "./Footer.css";
@@ -7,7 +8,8 @@ const Footer = () => {
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={assets.logo} alt="" />
+          {/* <img src={assets.logo} alt="" /> */}
+          <h1>QuickByte.</h1>
           <p>
             Browse through a wide selection of restaurants and cuisines, place
             your order with just a few taps, and enjoy delicious meals delivered
