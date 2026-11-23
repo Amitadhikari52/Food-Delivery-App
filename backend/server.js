@@ -1,4 +1,6 @@
 import "dotenv/config";
+import dns from "node:dns/promises";
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 import express from "express";
 import cors from "cors";
@@ -17,7 +19,19 @@ app.use(express.json());
 app.use(cors());
 
 // db connection
-connectDB();
+// db connection and server start
+const startServer = async () => {
+  try {
+    await connectDB();
+
+    app.listen(port, () => {
+      console.log(`Server started on http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.error("Server startup failed:", error);
+  }
+};
+
 
 // api endpoints
 app.use("/api/food", foodRouter);
@@ -30,6 +44,5 @@ app.get("/", (req, res) => {
   res.send("Api working!");
 });
 
-app.listen(port, () => {
-  console.log(`server started on http://localhost:${port}`);
-});
+
+startServer();
